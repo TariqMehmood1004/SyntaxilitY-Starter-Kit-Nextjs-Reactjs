@@ -1,0 +1,81 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  // directUrl = env("NEXT_PUBLIC_DIRECT_URL")
+}
+
+model User {
+  id         Int       @id @default(autoincrement())
+  clerkId    String    @unique
+  username   String?
+  email      String    @unique
+  firstName  String?
+  lastName   String?
+  fullName   String?
+  imageUrl   String?
+  provider   String?
+  providerId String?
+  lastSignIn DateTime?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+
+  // Relations
+  payment Payment[]
+  prompts Prompts[]
+}
+
+model Category {
+  id          Int      @id @default(autoincrement())
+  title       String?
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  prompts Prompts[]
+}
+
+model Prompts {
+  id          Int      @id @default(autoincrement())
+  title       String?
+  description String?
+  userId      Int
+  prompt      String?
+  imageURL    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  categoryId  Int
+  tier        String?  @default("free") // (free/premium)
+
+  user     User     @relation(fields: [userId], references: [id])
+  category Category @relation(fields: [categoryId], references: [id])
+
+  payment Payment[]
+}
+
+model Payment {
+  id            Int           @id @default(autoincrement())
+  userId        Int
+  promptsId     Int
+  amount        Float
+  currency      String        @default("USD")
+  status        PaymentStatus @default(PENDING)
+  provider      String? // e.g., Stripe, PayPal
+  transactionId String?
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  user    User    @relation(fields: [userId], references: [id])
+  prompts Prompts @relation(fields: [promptsId], references: [id])
+}
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  REFUNDED
+}

@@ -36,12 +36,21 @@ This kit streamlines authentication, UI theming, state management, database inte
 ## Project Structure
 
 ```
-src/
-├─ app/                # App routes and layout
-├─ components/         # UI components
-├─ store/              # Zustand global state stores
-├─ lib/                # Helpers, config, API handlers
-├─ prisma/             # Prisma schema & client
+project/
+|─ prisma/
+    |─ schema.prisma       # Prisma schema
+|─ src/
+    ├─ app/                # App routes and layout
+    ├─ components/         # UI components
+    |─ constants/          # Global constants
+    |─ databaseConnection/ # Database connection
+    |─ generated/          # Prisma client
+    |─ library/            # Utility functions
+    |─ provider/           # Providers
+    |─ store/              # Zustand store
+    |─ types/              # Global types
+    |─ utils/              # Utility functions
+    |─ middleware.ts       # Middleware setup
 ````
 
 ---

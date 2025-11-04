@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Draw Nodes - SyntaxilitY",
-  description: "A simple tool to draw nodes.",
+  title: "SyntaxilitY - a starter ui kit",
+  description: "A UI kit for your next project",
 };
 
 export default function RootLayout({

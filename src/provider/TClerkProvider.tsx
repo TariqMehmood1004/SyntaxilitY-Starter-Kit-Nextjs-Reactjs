@@ -19,8 +19,13 @@ export default function TClerkWithTheme({ children }: { children: React.ReactNod
           colorInputText: theme === "dark" ? "#ffffff" : "#212121",
         },
         elements: {
-          // Backdrop
-          modalBackdrop: "!shadow-none !fixed !inset-0 !z-[9998] !flex !items-center !justify-center !bg-black/15 !backdrop-blur-3xl !shadow-xl",
+         // Modals
+        modalContent:
+          "!relative !z-[9999] !flex !items-center !justify-center !max-w-screen !w-full !max-[767px]:!max-w-[100%] !mx-auto !my-auto !rounded-xl !overflow-y-auto !p-8 !bg-background !shadow-lg",
+
+        // Backdrop
+        modalBackdrop:
+          "!fixed !inset-0 !w-[100%] !h-[100%] !z-[9998] !flex !items-center !justify-center !bg-black/40 !backdrop-blur-lg",
 
           // buttons
           formButtonPrimary: "!shadow-none !bg-[#6c47ff] hover:!bg-[#5936e0] focus:!bg-[#5936e0] active:!bg-[#4729b8] !text-white !rounded-lg !p-3.5 !transition !ease-in !duration-200",
@@ -46,7 +51,7 @@ export default function TClerkWithTheme({ children }: { children: React.ReactNod
           cardHeaderSubtitle: "!text-sm !text-gray-500 dark:!text-gray-400 !shadow-none",
 
           // cards
-          card: "!rounded-lg dark:!bg-muted !shadow-none !max-w-4xl !w-full",
+          card: "!rounded-lg dark:!bg-muted !shadow-none !max-w-4xl !w-full !mx-auto",
           cardContent: "!p-6",
           cardFooter: "!p-6 !pt-0",
 

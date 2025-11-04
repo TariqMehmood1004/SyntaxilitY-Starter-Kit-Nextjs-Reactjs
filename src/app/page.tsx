@@ -22,7 +22,7 @@ export default function Home() {
   // Loader state while Clerk initializes
   if (!isLoaded) {
     return (
-      <div className="w-screen h-screen bg-white/25 dark:bg-black/25 flex items-center justify-center py-4">
+      <div className="fixed inset-0 z-[999] w-screen h-screen bg-slate-100 overflow-hidden dark:bg-black flex items-center justify-center py-4">
         <Loader className="animate-spin" />
       </div>
     );

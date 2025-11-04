@@ -21,11 +21,11 @@ export default function TClerkWithTheme({ children }: { children: React.ReactNod
         elements: {
          // Modals
         modalContent:
-          "!relative !z-[9999] !flex !items-center !justify-center !max-w-screen !w-full !max-[767px]:!max-w-[100%] !mx-auto !my-auto !rounded-xl !overflow-y-auto !p-8 !bg-background !shadow-lg",
+          "!relative !z-[9999] !flex !items-center !justify-center !max-w-screen !w-full !max-[767px]:!max-w-[100%] !mx-auto !my-auto !rounded-xl !overflow-y-auto !p-8 !bg-black/40 !backdrop-blur-lg",
 
         // Backdrop
         modalBackdrop:
-          "!fixed !inset-0 !w-[100%] !h-[100%] !z-[9998] !flex !items-center !justify-center !bg-black/40 !backdrop-blur-lg",
+          "!fixed !inset-0 !w-[100%] !h-[100%] !z-[9998] !flex !items-center !justify-center",
 
           // buttons
           formButtonPrimary: "!shadow-none !bg-[#6c47ff] hover:!bg-[#5936e0] focus:!bg-[#5936e0] active:!bg-[#4729b8] !text-white !rounded-lg !p-3.5 !transition !ease-in !duration-200",

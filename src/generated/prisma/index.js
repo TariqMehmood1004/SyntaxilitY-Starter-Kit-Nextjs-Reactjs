@@ -181,7 +181,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\johnb\\Desktop\\Tariq Mehmood Projects\\AI Prompts Engine\\ai-prompts-engine\\src\\generated\\prisma",
+      "value": "C:\\Users\\johnb\\Desktop\\Tariq Mehmood Projects\\SyntaxilitY UI Starter Kit\\src\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -195,7 +195,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\johnb\\Desktop\\Tariq Mehmood Projects\\AI Prompts Engine\\ai-prompts-engine\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\johnb\\Desktop\\Tariq Mehmood Projects\\SyntaxilitY UI Starter Kit\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -209,6 +209,7 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {

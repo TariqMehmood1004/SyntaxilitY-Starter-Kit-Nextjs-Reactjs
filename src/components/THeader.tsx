@@ -103,7 +103,7 @@ export default function THeader() {
                             />
                             <NavbarBrand>
                                 <CompanyLogo />
-                                <p className="font-bold text-lg text-blue-600 hidden">Syncdraw</p>
+                                <p className="font-bold text-lg text-blue-600 hidden">SyntaxilitY UI Starter Kit</p>
                             </NavbarBrand>
                         </NavbarContent>
 
@@ -133,11 +133,11 @@ export default function THeader() {
 
                             <Button
                                 onPress={() => setDepsModalOpen(true)}
-                                className="fixed bottom-4 right-4 p-2 w-9 h-9 bg-slate-200 dark:bg-[#373737] hover:bg-muted text-sm text-muted-foreground rounded-full transition-all duration-300"
+                                className="p-2 h-9 bg-slate-200 dark:bg-[#373737] hover:bg-muted text-sm text-muted-foreground rounded-full transition-all duration-300"
                                 aria-label="View Dependencies"
                             >
                                 <Code size={18} className="w-4 h-4" />
-                                <span className="hidden">Dependencies</span>
+                                <span className="">Dependencies</span>
                             </Button>
 
                             <SignedOut>
@@ -146,19 +146,11 @@ export default function THeader() {
                                     <SignInButton mode="modal">
                                         <Button href="#" className="rounded-lg px-3 py-1 border-0 dark:border-[#373737] dark:hover:bg-[#373737]/80 transition ease-in duration-200">Login</Button>
                                     </SignInButton>
-                                    {/* <SignUpButton mode="modal">
+                                    <SignUpButton mode="modal">
                                         <Button color="primary" href="#" variant="flat" className="bg-gray-100 hover:bg-gray-300 rounded-lg px-3 py-1 dark:bg-[#212121] dark:hover:bg-[#212121]/80 transition ease-in duration-200">
                                             Sign Up
                                         </Button>
-                                    </SignUpButton> */}
-                                    <Button color="primary" href="#" variant="flat" className="rounded-lg px-3 py-1 border-[2px] dark:border-[#373737] dark:hover:bg-[#373737]/80 transition ease-in duration-200">
-                                        Book Demo
-                                    </Button>
-
-                                    <Button color="primary" href="#" variant="flat" className="bg-gray-100 hover:bg-gray-300 rounded-lg px-3 py-1 dark:bg-white dark:hover:bg-white/80 dark:text-black transition ease-in duration-200">
-                                        <span>Try Syncdraw</span>
-                                        <ArrowRight size={18} className="ml-2" />
-                                    </Button>
+                                    </SignUpButton>
                                 </div>
 
                             </SignedOut>
